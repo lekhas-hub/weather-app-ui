@@ -51,16 +51,42 @@
         }
     </style>
 </head>
+    <script>
+    function changeWeather(city, temp, details, icon) {
+        document.getElementById("city").innerText = city;
+        document.getElementById("temp").innerText = temp;
+        document.getElementById("details").innerText = details;
+        document.getElementById("icon").innerText = icon;
+
+        if (icon === "☀️") {
+            document.body.style.background = "linear-gradient(to right, #f6d365, #fda085)";
+        }
+        else if (icon === "☁️") {
+            document.body.style.background = "linear-gradient(to right, #bdc3c7, #2c3e50)";
+        }
+        else if (icon === "🌧️") {
+            document.body.style.background = "linear-gradient(to right, #4facfe, #00f2fe)";
+        }
+    }
+</script>
 <body>
 
     <div class="weather-card">
         <input type="text" placeholder="Enter city name">
 
         <button>Search</button>
+        <br><br>
 
-        <div class="temp">28°C</div>
-        <div class="city">Bangalore</div>
-        <div class="details">Sunny | Humidity: 60%</div>
+<button onclick="changeWeather('Bangalore', '28°C', 'Sunny | Humidity: 60%', '☀️')">Bangalore</button>
+
+<button onclick="changeWeather('Delhi', '22°C', 'Cloudy | Humidity: 45%', '☁️')">Delhi</button>
+
+<button onclick="changeWeather('Mumbai', '30°C', 'Rainy | Humidity: 75%', '🌧️')">Mumbai</button>
+
+        <div id="icon" style="font-size: 50px;">☀️</div>
+<div class="temp" id="temp">28°C</div>
+<div class="city" id="city">Bangalore</div>
+<div class="details" id="details">Sunny | Humidity: 60%</div>
     </div>
 
 </body>
