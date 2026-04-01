@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .weather-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            width: 280px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            background: #4facfe;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .temp {
+            font-size: 40px;
+            margin: 15px 0;
+        }
+
+        .city {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .details {
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="weather-card">
+        <input type="text" placeholder="Enter city name">
+
+        <button>Search</button>
+
+        <div class="temp">28°C</div>
+        <div class="city">Bangalore</div>
+        <div class="details">Sunny | Humidity: 60%</div>
+    </div>
+
+</body>
+</html>
